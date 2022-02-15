@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="/stylesheets/index.css" />
+</head>
+
+<body>
+  <title>RECTANGLES</title>
+  <h1 id="title">RECTANGLES</h1>
+
+    <div id="table-container">
+      <table id="table">
+          <thead>
+          <tr>
+              <th>Name (click to visit)</th>
+              <th>Height</th>
+              <th>Width</th>
+              <th>Colour</th>
+          </tr>
+          </thead>
+          
+          <tbody>  
+            <%rows.forEach(function(r) {%>
+                <tr class="rows">  
+                    <td><a href="/rectangle/<%= r.id%>" style="all:unset;"><h3><%= r.name%></h3> </a> </td>
+                    <td> <%= r.height%></td>
+                    <td> <%= r.width%></td>
+                    <td> <%= r.color%></td>
+                </tr>
+            <% }); %>
+        
+        </tbody>
+      </table>
+  </div>
+
+
+  <div id="buttons">
+    <form action="/addRectangle">
+      <a href="/" style="all:unset; text-decoration:none;  margin-left: 5%">
+        <input type="submit" value="Add Rectangle" class="custom-button"/>
+      </a>
+  </form>
+  </div>
+
+
+</body>
+
+    <script>
+    </script>
+</html>

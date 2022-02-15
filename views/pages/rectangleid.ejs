@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="/stylesheets/rectangle.css" />
+</head>
+
+<body>
+    <%rows.forEach(function(r) {%>
+        
+    <div id="left">
+        <title><%= r.name%></title>
+        
+        <h1 id="title"><%= r.name%></h1>
+        <table id="properties">
+            
+        <thead>
+          <tr> <th></th> <th></th></tr>
+        </thead>
+
+        <tbody>
+          <tr class="property">
+            <td>Height</td>
+            <td><%= r.height%></td>
+          </tr>
+          <tr class="property">
+            <td>Width</td>
+            <td><%= r.width%></td>
+          </tr>
+          <tr class="property">
+            <td>Colour</td>
+            <td><%= r.color%></td>
+          </tr>
+          <tr class="id">
+            <td>ID</td>
+            <td><%= r.id%></td>
+          </tr>
+
+
+        </tbody>
+      </table>
+
+      <div style="display: flex; flex-direction: row; width: 100%; margin:auto; margin-left: 10%; ">
+        <form action="/"  >
+          <input type="submit" value="Go Back to Index" style="all:unset; padding: 1px; background-color: yellow; border: 1px solid black; padding: 10px; 
+          font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;"/>
+        </form>
+
+       
+        <form action="/makeChanges/<%= r.id%>" >
+          <input type="submit" value="Make Changes" style="all:unset; padding: 1px; background-color: yellow; border: 1px solid black;padding: 10px; 
+          font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;"/>
+        </form>
+        
+        <form action="/deleteRectangle/<%= r.id%>" method="POST" >
+          <input type="submit" value="Delete Rectangle" style="all:unset; padding: 1px; background-color: yellow; border: 1px solid black;padding: 10px; 
+          font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;"/>
+        </form>
+
+        
+      </div>
+    </div>
+
+    <div id="right">
+        <div style="width: <%= r.width%>px; height: <%= r.height%>px; background-color: <%= r.color%>; align-content: center; margin: auto;" ></div>
+    </div>
+    <% }); %>
+
+</body>
+
+
+</html>

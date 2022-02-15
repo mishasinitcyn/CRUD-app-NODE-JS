@@ -1,0 +1,70 @@
+body{
+    margin: 0;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    overflow: hidden;
+    background-color: rgb(233, 243, 255);
+}
+#title{
+    text-align: center;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 5vh;
+    margin-top: 2vh;
+    color: black;
+}
+
+#table-head{
+    /* background-color: #e6d2d3; */
+    margin: 0px; padding: 0px;
+}
+
+#table-container{
+    overflow: auto;
+    height: 70vh;
+    border: 1px solid black;
+    width: 90vw;
+    margin: auto;margin-bottom: 4%;
+}
+
+#table {
+    width: 100%;
+    height: auto; 
+    border: 1px solid rgb(192, 192, 192);
+    border-collapse:collapse;
+    padding:5px;
+    margin: auto;
+    text-align: left;background-color: white;
+    text-align: center;
+}
+#table th {
+    border: 1px solid rgb(192, 192, 192);
+    padding-left:5px;
+    background:#e4e4e4;
+    width: 9vw;
+    height: 50px;
+}
+#table td {
+    border: 1px solid rgb(192, 192, 192);
+    padding-left:5px;
+}
+
+.rows{
+    height: 100px;
+}
+
+/* SCROLL BAR */
+::-webkit-scrollbar {width: 10px;}
+::-webkit-scrollbar-track {background: #f1f1f1;}
+::-webkit-scrollbar-thumb {background: white; border: 1px solid black;}
+
+#add-rectangle-button{
+    all: unset;
+    border: 1px solid black;
+    padding: 10px;
+    padding: 1px; background-color: yellow; border: 1px solid black; margin-left: 5%; padding: 10px; 
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; color:black;
+}
+
+.custom-button{
+    padding: 1px; background-color: yellow; border: 1px solid black; padding: 10px; 
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; color:black;
+}
